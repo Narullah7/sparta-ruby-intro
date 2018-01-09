@@ -1,7 +1,8 @@
+require 'spec_helper'
 require_relative "../person"
 
 describe Person do
-  
+
   # create a new person before each test
   before :each do
       @person = Person.new
@@ -15,12 +16,12 @@ describe Person do
 
   describe "age" do
       it "should be a number" do
-          expect(@person.age).to be_an_instance_of Fixnum
+          expect(@person.age).to be_kind_of(Integer)
       end
   end
 
   describe "children" do
-     
+
       it "should be an array" do
           expect(@person.children).to be_an_instance_of Array
       end
@@ -61,7 +62,7 @@ describe Person do
     end
 
     it "should have a number for house_number" do
-      expect(@person.address[:house_number]).to be_an_instance_of Fixnum
+      expect(@person.address[:house_number]).to be_kind_of(Integer)
     end
 
     it "should have a string for street" do

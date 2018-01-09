@@ -13,8 +13,7 @@ class Person
     def children
         # create children array here
         array = ["bob","bill","ben","dave"]
-
-
+        
     end
 
     def address
